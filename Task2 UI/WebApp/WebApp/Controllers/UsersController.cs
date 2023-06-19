@@ -28,6 +28,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Users/Details/5
+        [HttpGet("Details")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,7 +37,7 @@ namespace WebApp.Controllers
             }
 
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.UserId == id);
             if (user == null)
             {
                 return NotFound();
@@ -46,6 +47,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Users/Create
+        [HttpGet("Create")]
         public IActionResult Create()
         {
             return View();
@@ -68,6 +70,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Users/Edit/5
+        [HttpGet("Edit")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -90,7 +93,7 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,SecondName,Age,Email")] User user)
         {
-            if (id != user.Id)
+            if (id != user.UserId)
             {
                 return NotFound();
             }
@@ -104,7 +107,7 @@ namespace WebApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UserExists(user.Id))
+                    if (!UserExists(user.UserId))
                     {
                         return NotFound();
                     }
@@ -119,6 +122,7 @@ namespace WebApp.Controllers
         }
 
         // GET: Users/Delete/5
+        [HttpGet("Delete")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -127,7 +131,7 @@ namespace WebApp.Controllers
             }
 
             var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.UserId == id);
             if (user == null)
             {
                 return NotFound();
@@ -149,7 +153,7 @@ namespace WebApp.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }

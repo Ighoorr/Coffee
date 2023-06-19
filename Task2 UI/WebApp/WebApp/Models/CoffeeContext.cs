@@ -17,6 +17,8 @@ namespace WebApp.Models
         {
         }
 
+        public virtual DbSet<FreeTime> FreeTimes { get; set; }
+        public virtual DbSet<Hobby> Hobbies { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,11 +34,57 @@ namespace WebApp.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Ukrainian_CI_AS");
 
+            modelBuilder.Entity<FreeTime>(entity =>
+            {
+                entity.HasKey(e => e.TimeId);
+
+                entity.ToTable("FreeTime");
+
+                entity.Property(e => e.TimeId).HasColumnName("timeId");
+
+                entity.Property(e => e.Day)
+                    .HasMaxLength(100)
+                    .HasColumnName("day");
+
+                entity.Property(e => e.Time)
+                    .HasColumnType("datetime")
+                    .HasColumnName("time");
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.FreeTimes)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_FreeTime_User");
+            });
+
+            modelBuilder.Entity<Hobby>(entity =>
+            {
+                entity.ToTable("Hobby");
+
+                entity.Property(e => e.HobbyId).HasColumnName("hobbyId");
+
+                entity.Property(e => e.Desc)
+                    .HasColumnType("text")
+                    .HasColumnName("desc");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(100)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Hobbies)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_Hobby_User");
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("User");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.Property(e => e.Age).HasColumnName("age");
 
@@ -47,6 +95,10 @@ namespace WebApp.Models
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(100)
                     .HasColumnName("firstName");
+
+                entity.Property(e => e.Pass)
+                    .HasMaxLength(100)
+                    .HasColumnName("pass");
 
                 entity.Property(e => e.SecondName)
                     .HasMaxLength(100)

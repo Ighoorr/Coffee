@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YpdlT7PUaubWR5zj0A9BFidIqelucYdVf6bgQSyUTyKBk8ma2Cc24qCsn8x64WJbDAqwiNnUka0ulbyctemdOg==",
+  "dgSpecHash": "AX2eKbdAHvgSirWB290VL7tg++cr4RIigVwePAYGSSiejapErwx7N2ZU21e8rSGIaVHitoQ9MG61+blIgY+BSw==",
   "success": true,
-  "projectFilePath": "D:\\Pract\\WebApp\\WebApp\\WebApp.csproj",
+  "projectFilePath": "D:\\Pract\\Coffee\\Task2 UI\\WebApp\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Користувач\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Користувач\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

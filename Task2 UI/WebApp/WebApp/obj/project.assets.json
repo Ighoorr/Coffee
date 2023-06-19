@@ -10013,11 +10013,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pract\\WebApp\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "D:\\Pract\\Coffee\\Task2 UI\\WebApp\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "D:\\Pract\\WebApp\\WebApp\\WebApp.csproj",
+      "projectPath": "D:\\Pract\\Coffee\\Task2 UI\\WebApp\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\Користувач\\.nuget\\packages\\",
-      "outputPath": "D:\\Pract\\WebApp\\WebApp\\obj\\",
+      "outputPath": "D:\\Pract\\Coffee\\Task2 UI\\WebApp\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Користувач\\AppData\\Roaming\\NuGet\\NuGet.Config",
