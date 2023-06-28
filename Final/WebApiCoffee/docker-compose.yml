@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapicoffee:
+    image: ${DOCKER_REGISTRY-}webapicoffee
+    build:
+      context: .
+      dockerfile: WebApiCoffee\Dockerfile
