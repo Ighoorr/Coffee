@@ -7909,11 +7909,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pract\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
+      "projectUniqueName": "D:\\Pract\\New folderfgfdhg\\Coffee\\Final\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
       "projectName": "WebApiCoffee",
-      "projectPath": "D:\\Pract\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
+      "projectPath": "D:\\Pract\\New folderfgfdhg\\Coffee\\Final\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
       "packagesPath": "C:\\Users\\Користувач\\.nuget\\packages\\",
-      "outputPath": "D:\\Pract\\WebApiCoffee\\WebApiCoffee\\obj\\",
+      "outputPath": "D:\\Pract\\New folderfgfdhg\\Coffee\\Final\\WebApiCoffee\\WebApiCoffee\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Користувач\\AppData\\Roaming\\NuGet\\NuGet.Config",

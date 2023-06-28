@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KdQNk0Yas28l5b6fq7fJT7B6ZErEnjOsyjH1JDcDoFA1nilJyyAGvE6netZUTCU481VfO/QqWKhAXy4zPtqU3w==",
+  "dgSpecHash": "gz+Kh96hh9OqNuJroe9n/j8CLtvt6z8KpMLia5DN57J/PpQfOJInNvvwiphqhLaUh9o/na4UJTRhxWz4hFroHg==",
   "success": true,
-  "projectFilePath": "D:\\Pract\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
+  "projectFilePath": "D:\\Pract\\New folderfgfdhg\\Coffee\\Final\\WebApiCoffee\\WebApiCoffee\\WebApiCoffee.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Користувач\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Користувач\\.nuget\\packages\\cloudinarydotnet\\1.20.0\\cloudinarydotnet.1.20.0.nupkg.sha512",
