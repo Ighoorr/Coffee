@@ -5,4 +5,20 @@ services:
     image: ${DOCKER_REGISTRY-}webapicoffee
     build:
       context: .
-      dockerfile: WebApiCoffee\Dockerfile
+      dockerfile: WebApiCoffee/Dockerfile
+    depends_on:
+          - db
+  my-app:
+    image: my-app
+    build:
+      context: ../my-app
+      dockerfile: /Dockerfile
+  db:
+        image: "mcr.microsoft.com/mssql/server:2018-latest"
+        ports:
+          - "1433:1433"
+        environment:
+            SA_PASSWORD: "S3cur3P@ssW0rd!"
+            ACCEPT_EULA: "Y"
+            MSSQL_TCP_PORT: "1433"
+            MSSQL_ENABLE_REMOTE_CONNECTIONS: "true"

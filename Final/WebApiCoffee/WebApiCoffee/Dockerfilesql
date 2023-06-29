@@ -1,0 +1,7 @@
+﻿# Використовуйте офіційний образ SQL Server в якості базового образу
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+# Налаштуйте пароль для SA користувача
+ENV SA_PASSWORD=YourStrongPassword123
+ENV ACCEPT_EULA=Y
+

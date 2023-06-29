@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    
+  my-app:
+    build: .
+    container_name: myblog_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    volumes:
+      - .:/app
+      - /app/node_modules
